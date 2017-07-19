@@ -8,7 +8,7 @@
             "email": "carlos@lizaola.net"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Clizaola\\Simplecast\\": "src"
@@ -20,5 +20,15 @@
     },
     "require-dev": {
         "phpunit/phpunit": "~5.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Clizaola\\Simplecast\\SimplecastServiceProvider"
+            ],
+            "aliases": {
+                "Simplecast": "Clizaola\\Simplecast\\SimplecastFacade"
+            }
+        }
     }
 }
